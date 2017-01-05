@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>jQuery可编辑表格插件</title>
+    <meta charset="utf-8" />
+    <script src="http://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<script src="editable.js"></script>
+    <script>
+        //================全局变量
+        var data = '[{ "id": "888", "arrtime": "2016-10-19", "week": "58", "aim": "玩耍", "project": "彩绘", "linerec": "asdasdasd...", "isconv": "true", "convserv": "转化服务", "convproduct": "转化产品", "convmoney": "转化金额", "visitime": "2016-10-20" },{ "id": "889", "arrtime": "2016-10-20", "week": "58", "aim": "玩耍", "project": "彩绘", "linerec": "asdasdasd...", "isconv": "true", "convserv": "转化服务", "convproduct": "转化产品", "convmoney": "转化金额", "visitime": "2016-10-20" }]';
+        var userjson = JSON.parse(data);	//*需要传递的参数
+        //================dom加载完成事件
+        $(function () {
+		$.creditable({tableDom:'editable',tableData:userjson});
+        });
+	
+    </script>
+</head>
+<body>
+    <table cellpadding="0" cellspacing="0" borderColor="#ccc" border="1" class="editable">
+        <tr>
+            <th>序号</th>
+            <th>到店时间</th>
+            <th>孕周</th>
+            <th>到店目的</th>
+            <th>参与项目</th>
+            <th>接待顾客动线记录</th>
+            <th>是否转化</th>
+            <th>转化服务</th>
+            <th>转化产品</th>
+            <th>转化金额</th>
+            <th>客服回访(时间)</th>
+            <th>操作</th>
+        </tr>
+    </table>
+</body>
+</html>
